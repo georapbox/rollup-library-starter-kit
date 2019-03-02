@@ -1,0 +1,48 @@
+{
+  "name": "rollup-library-starter-kit",
+  "version": "1.0.0",
+  "description": "Rollup starter kit for creating libraries",
+  "main": "dist/Library.cjs.js",
+  "module": "dist/Library.esm.js",
+  "browser": "dist/Library.umd.js",
+  "files": [
+    "src/",
+    "dist/"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build",
+    "lint": "eslint src/**/*.js",
+    "test": "cross-env NODE_ENV=test mocha --require @babel/register --colors ./test/*.spec.js",
+    "coverage": "nyc --reporter=text --reporter=lcov npm test",
+    "prepublishOnly": "npm test && npm run build build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georapbox/rollup-library-starter-kit.git"
+  },
+  "keywords": [],
+  "author": "George Raptis <georapbox@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/georapbox/rollup-library-starter-kit/issues"
+  },
+  "homepage": "https://github.com/georapbox/rollup-library-starter-kit#readme",
+  "devDependencies": {
+    "@babel/core": "~7.3.4",
+    "@babel/preset-env": "~7.3.4",
+    "@babel/register": "~7.0.0",
+    "chai": "~4.2.0",
+    "cross-env": "~5.2.0",
+    "eslint": "~5.15.0",
+    "mocha": "~6.0.2",
+    "nyc": "~13.3.0",
+    "rollup": "~1.4.0",
+    "rollup-plugin-babel": "~4.3.2",
+    "rollup-plugin-commonjs": "~9.2.1",
+    "rollup-plugin-node-resolve": "~4.0.1",
+    "sinon": "~7.2.6",
+    "sinon-chai": "~3.3.0"
+  }
+}
