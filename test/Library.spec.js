@@ -1,7 +1,7 @@
 const sinon = require('sinon');
 const sinonChai = require('sinon-chai');
 const chai = require('chai');
-const Library = require('../dist/Library.cjs.js');
+const Library = require('..');
 
 const { expect } = chai;
 

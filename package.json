@@ -12,8 +12,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
-    "pretest": "npm run build",
     "lint": "eslint src/**/*.js",
+    "pretest": "npm run build",
     "test": "cross-env NODE_ENV=test mocha --require @babel/register --colors ./test/*.spec.js",
     "coverage": "nyc --reporter=text --reporter=lcov npm test",
     "prepublishOnly": "npm test && npm run build build"
