@@ -1,7 +1,7 @@
-const sinon = require('sinon');
-const sinonChai = require('sinon-chai');
-const chai = require('chai');
-const Library = require('..');
+import sinon from 'sinon';
+import sinonChai from 'sinon-chai';
+import chai from 'chai';
+import Library from '../src';
 
 const { expect } = chai;
 
@@ -13,11 +13,18 @@ let library;
 describe('Library', () => {
   beforeEach(() => library = new Library());
 
+  it('should get the library\'s version', () => {
+    expect(library.version).to.eql('1.0.0');
+  });
+
   it('should get the library\'s name', () => {
     const spy = sinon.spy(library, 'name');
     const name = library.name();
+
     expect(name).to.eql('Library');
+
     spy.restore();
+
     expect(spy).to.have.been.called;
   });
 });

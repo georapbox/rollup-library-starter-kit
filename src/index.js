@@ -1,7 +1,9 @@
+import { LIB_NAME, LIB_VERSION } from './constants';
+
 class Library {
   constructor() {
-    this._name = 'Library';
-    this.version = '1.0.0';
+    this._name = LIB_NAME;
+    this.version = LIB_VERSION;
   }
 
   name() {
