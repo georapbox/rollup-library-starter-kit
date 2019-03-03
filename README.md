@@ -50,7 +50,6 @@ Rollup starter kit for creating libraries (Input: ES6, Output: UMD, CommonJS, ES
 - `npm run test` - Runs the tests.
 - `npm run coverage` - Runs the tests and provides with test coverage information.
 - `npm run lint` - Lints the source code with ESlint.
-- `npm run prepublishOnly` - Runs before publishing the library to npm. Runs the tests and builds the library for production.
 
 ## Misc
 
