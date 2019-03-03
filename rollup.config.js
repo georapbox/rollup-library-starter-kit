@@ -5,11 +5,23 @@ import pkg from './package.json';
 
 const libraryName = 'Library'; // Change with your library's name
 
+const banner = `/*!
+ * ${pkg.name}
+ * ${pkg.description}
+ *
+ * @version v${pkg.version}
+ * @author ${pkg.author}
+ * @homepage ${pkg.homepage}
+ * @repository ${pkg.repository.url}
+ * @license ${pkg.license}
+ */`;
+
 export default [
   // Browser-friendly UMD build
   {
     input: 'src/index.js',
     output: {
+      banner,
       name: libraryName,
       file: pkg.browser,
       format: 'umd'
@@ -29,8 +41,16 @@ export default [
     input: 'src/index.js',
     external: [], // indicate which modules should be treated as external
     output: [
-      { file: pkg.main, format: 'cjs' },
-      { file: pkg.module, format: 'es' }
+      {
+        banner,
+        file: pkg.main,
+        format: 'cjs'
+      },
+      {
+        banner,
+        file: pkg.module,
+        format: 'es'
+      }
     ],
     plugins: [
       babel({
