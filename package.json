@@ -13,7 +13,6 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "lint": "eslint src/**/*.js",
-    "pretest": "npm run build",
     "test": "cross-env NODE_ENV=test mocha --require @babel/register --colors ./test/*.spec.js",
     "coverage": "nyc --reporter=text --reporter=lcov npm test",
     "prepublishOnly": "npm test && npm run build build"
@@ -44,5 +43,6 @@
     "rollup-plugin-node-resolve": "~4.0.1",
     "sinon": "~7.2.6",
     "sinon-chai": "~3.3.0"
-  }
+  },
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead"
 }
