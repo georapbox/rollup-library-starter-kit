@@ -8,5 +8,8 @@ module.exports = {
         modules: NODE_ENV === 'test' ? 'auto' : false
       }
     ]
+  ],
+  plugins: [
+    '@babel/plugin-proposal-object-rest-spread'
   ]
 };

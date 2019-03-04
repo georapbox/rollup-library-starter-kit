@@ -31,6 +31,7 @@
   "homepage": "https://github.com/georapbox/rollup-library-starter-kit#readme",
   "devDependencies": {
     "@babel/core": "~7.3.4",
+    "@babel/plugin-proposal-object-rest-spread": "~7.3.4",
     "@babel/preset-env": "~7.3.4",
     "@babel/register": "~7.0.0",
     "chai": "~4.2.0",
