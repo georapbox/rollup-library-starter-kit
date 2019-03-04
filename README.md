@@ -50,6 +50,8 @@ Rollup starter kit for creating libraries (Input: ES6, Output: UMD, CommonJS, ES
 - `npm run test` - Runs the tests.
 - `npm run coverage` - Runs the tests and provides with test coverage information.
 - `npm run lint` - Lints the source code with ESlint.
+- `npm run prepare` - Run both BEFORE the package is packed and published, on local npm install without any arguments, and when installing git dependencies.
+- `npm run clean` - Deletes `dist` and `coverage` folders.
 
 ## Misc
 
