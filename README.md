@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/georapbox/rollup-library-starter-kit.svg?branch=master)](https://travis-ci.org/georapbox/rollup-library-starter-kit)
+
 # rollup-library-starter-kit
 
 Rollup starter kit for creating libraries (Input: ES6, Output: UMD, CommonJS, ESM)
