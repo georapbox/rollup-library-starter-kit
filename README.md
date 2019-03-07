@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/georapbox/rollup-library-starter-kit.svg?branch=master)](https://travis-ci.org/georapbox/rollup-library-starter-kit)
+[![Dependencies](https://david-dm.org/georapbox/rollup-library-starter-kit.svg?theme=shields.io)](https://david-dm.org/georapbox/rollup-library-starter-kit)
+[![devDependency Status](https://david-dm.org/georapbox/rollup-library-starter-kit/dev-status.svg)](https://david-dm.org/georapbox/rollup-library-starter-kit?type=dev)
 
 # rollup-library-starter-kit
 
