@@ -46,7 +46,8 @@ export default commandLineArgs => {
         {
           banner,
           file: pkg.main,
-          format: 'cjs'
+          format: 'cjs',
+          exports: 'auto'
         },
         {
           banner,
