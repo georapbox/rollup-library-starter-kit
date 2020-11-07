@@ -8,12 +8,11 @@ Rollup starter kit for creating libraries (Input: ES6, Output: UMD, CommonJS, ES
 
 ## Features
 
-- Rollup 1.x.x
+- Rollup 2.x.x
 - Babel 7
 - ES6 as a source
 - Exports in UMD, CommonJS, ESM formats
-- ES6 test setup with [Mocha](https://mochajs.org/) and [Chai](http://www.chaijs.com/)
-- Test coverage with [nyc command-line-client for Istanbul](https://github.com/istanbuljs/nyc)
+- ES6 test setup with [Jest](https://jestjs.io/)
 - Linting with [ESLint](https://eslint.org/)
 - Basic [Travis](https://travis-ci.org/) configuration
 
@@ -52,7 +51,8 @@ Rollup starter kit for creating libraries (Input: ES6, Output: UMD, CommonJS, ES
 - `npm run build` - Produces production version of library modules under `dist` folder.
 - `npm run dev` - Produces a development version of library and runs a watcher to watch for changes.
 - `npm run test` - Runs the tests.
-- `npm run coverage` - Runs the tests and provides with test coverage information.
+- `npm run test:watch` - Runs the tests in watch mode for development.
+- `npm run test:coverage` - Runs the tests and provides with test coverage information.
 - `npm run lint` - Lints the source code with ESlint.
 - `npm run prepare` - Run both BEFORE the package is packed and published, on local npm install without any arguments, and when installing git dependencies.
 - `npm run clean` - Deletes `dist` and `coverage` folders.
