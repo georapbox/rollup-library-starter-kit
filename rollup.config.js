@@ -1,10 +1,12 @@
-// import resolve from 'rollup-plugin-node-resolve';
-// import commonjs from 'rollup-plugin-commonjs';
-import babel from 'rollup-plugin-babel';
+// import resolve from '@rollup/plugin-node-resolve';
+// import commonjs from '@rollup/plugin-commonjs';
+import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 
-const libraryName = 'Library'; // Change with your library's name
+const LIBRARY_NAME = 'Library'; // Change with your library's name
+const EXTERNAL = []; // Indicate which modules should be treated as external
+const GLOBALS = {}; // https://rollupjs.org/guide/en/#outputglobals
 
 const banner = `/*!
  * ${pkg.name}
@@ -19,65 +21,76 @@ const banner = `/*!
 
 export default commandLineArgs => {
   const configs = [
-    // UMD Development
     {
       input: 'src/index.js',
-      output: {
-        banner,
-        name: libraryName,
-        file: pkg.browser,
-        format: 'umd'
-      },
+      external: EXTERNAL,
+      output: [
+        {
+          banner,
+          name: LIBRARY_NAME,
+          file: `dist/${LIBRARY_NAME}.umd.js`, // UMD
+          format: 'umd',
+          globals: GLOBALS
+        },
+        {
+          banner,
+          file: `dist/${LIBRARY_NAME}.cjs.js`, // CommonJS
+          format: 'cjs',
+          exports: 'auto',
+          globals: GLOBALS
+        },
+        {
+          banner,
+          file: `dist/${LIBRARY_NAME}.esm.js`, // ESM
+          format: 'es',
+          globals: GLOBALS
+        }
+      ],
       plugins: [
         // Uncomment the following 2 lines if your library has external dependencies
         // resolve(), // teach Rollup how to find external modules
         // commonjs(), // so Rollup can convert external modules to an ES module
         babel({
-          exclude: ['node_modules/**']
-        })
-      ]
-    },
-
-    // CommonJS (for Node) and ES module (for bundlers) build
-    {
-      input: 'src/index.js',
-      external: [], // indicate which modules should be treated as external
-      output: [
-        {
-          banner,
-          file: pkg.main,
-          format: 'cjs',
-          exports: 'auto'
-        },
-        {
-          banner,
-          file: pkg.module,
-          format: 'es'
-        }
-      ],
-      plugins: [
-        babel({
+          babelHelpers: 'bundled',
           exclude: ['node_modules/**']
         })
       ]
     }
   ];
 
+  // Production
   if (commandLineArgs.environment === 'BUILD:production') {
-    // UMD Production
     configs.push({
       input: 'src/index.js',
-      output: {
-        banner,
-        name: libraryName,
-        file: `dist/${libraryName}.umd.min.js`,
-        format: 'umd'
-      },
+      external: EXTERNAL,
+      output: [
+        {
+          banner,
+          name: LIBRARY_NAME,
+          file: `dist/${LIBRARY_NAME}.umd.min.js`, // UMD
+          format: 'umd',
+          globals: GLOBALS
+        },
+        {
+          banner,
+          file: `dist/${LIBRARY_NAME}.cjs.min.js`, // CommonJS
+          format: 'cjs',
+          exports: 'auto',
+          globals: GLOBALS
+        },
+        {
+          banner,
+          file: `dist/${LIBRARY_NAME}.esm.min.js`, // ESM
+          format: 'es',
+          globals: GLOBALS
+        }
+      ],
       plugins: [
         // Uncomment the following 2 lines if your library has external dependencies
         // resolve(), // teach Rollup how to find external modules
         // commonjs(), // so Rollup can convert external modules to an ES module
         babel({
+          babelHelpers: 'bundled',
           exclude: ['node_modules/**']
         }),
         terser({
