@@ -20,7 +20,7 @@ Rollup starter kit for creating libraries (Input: ES6, Output: UMD, CommonJS, ES
 
 ### 1. Setup the library's name
 
-- Open `rollup.config.js` and change the value of `libraryName` variable with your library's name.
+- Open `rollup.config.js` and change the value of `LIBRARY_NAME` variable with your library's name.
 - Open `package.json` and change the following properties with your library's equivalent
   - `name`
   - `version`
