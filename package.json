@@ -2,9 +2,9 @@
   "name": "rollup-library-starter-kit",
   "version": "1.0.0",
   "description": "Rollup starter kit for creating libraries",
-  "main": "dist/Library.cjs.js",
-  "module": "dist/Library.esm.js",
-  "browser": "dist/Library.umd.js",
+  "main": "dist/Library.cjs.min.js",
+  "module": "dist/Library.esm.min.js",
+  "browser": "dist/Library.umd.min.js",
   "files": [
     "src/",
     "dist/"
