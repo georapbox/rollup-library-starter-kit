@@ -30,19 +30,23 @@ export default commandLineArgs => {
           name: LIBRARY_NAME,
           file: `dist/${LIBRARY_NAME}.umd.js`, // UMD
           format: 'umd',
+          exports: 'auto',
           globals: GLOBALS
         },
         {
           banner,
           file: `dist/${LIBRARY_NAME}.cjs.js`, // CommonJS
           format: 'cjs',
-          exports: 'auto',
+          // We use `default` here as we are only exporting one thing using `export default`.
+          // https://rollupjs.org/guide/en/#outputexports
+          exports: 'default',
           globals: GLOBALS
         },
         {
           banner,
           file: `dist/${LIBRARY_NAME}.esm.js`, // ESM
           format: 'es',
+          exports: 'auto',
           globals: GLOBALS
         }
       ],
@@ -69,19 +73,23 @@ export default commandLineArgs => {
           name: LIBRARY_NAME,
           file: `dist/${LIBRARY_NAME}.umd.min.js`, // UMD
           format: 'umd',
+          exports: 'auto',
           globals: GLOBALS
         },
         {
           banner,
           file: `dist/${LIBRARY_NAME}.cjs.min.js`, // CommonJS
           format: 'cjs',
-          exports: 'auto',
+          // We use `default` here as we are only exporting one thing using `export default`.
+          // https://rollupjs.org/guide/en/#outputexports
+          exports: 'default',
           globals: GLOBALS
         },
         {
           banner,
           file: `dist/${LIBRARY_NAME}.esm.min.js`, // ESM
           format: 'es',
+          exports: 'auto',
           globals: GLOBALS
         }
       ],
