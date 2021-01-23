@@ -4,7 +4,7 @@
   "description": "Rollup starter kit for creating libraries",
   "main": "dist/Library.cjs.min.js",
   "module": "dist/Library.esm.min.js",
-  "browser": "dist/Library.umd.min.js",
+  "unpkg": "dist/Library.umd.min.js",
   "files": [
     "src/",
     "dist/"
