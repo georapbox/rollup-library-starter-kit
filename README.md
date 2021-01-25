@@ -1,5 +1,4 @@
-![Node.js CI](https://github.com/georapbox/rollup-library-starter-kit/workflows/Node.js%20CI/badge.svg)
-[![Build Status](https://travis-ci.com/georapbox/rollup-library-starter-kit.svg?branch=master)](https://travis-ci.com/georapbox/rollup-library-starter-kit)
+![Build](https://github.com/georapbox/rollup-library-starter-kit/workflows/Build/badge.svg)
 [![Dependencies](https://david-dm.org/georapbox/rollup-library-starter-kit.svg?theme=shields.io)](https://david-dm.org/georapbox/rollup-library-starter-kit)
 [![devDependency Status](https://david-dm.org/georapbox/rollup-library-starter-kit/dev-status.svg)](https://david-dm.org/georapbox/rollup-library-starter-kit?type=dev)
 
