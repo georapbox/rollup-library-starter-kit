@@ -1,4 +1,4 @@
-![Build](https://github.com/georapbox/rollup-library-starter-kit/workflows/Build/badge.svg)
+![build](https://github.com/georapbox/rollup-library-starter-kit/workflows/build/badge.svg)
 [![Dependencies](https://david-dm.org/georapbox/rollup-library-starter-kit.svg?theme=shields.io)](https://david-dm.org/georapbox/rollup-library-starter-kit)
 [![devDependency Status](https://david-dm.org/georapbox/rollup-library-starter-kit/dev-status.svg)](https://david-dm.org/georapbox/rollup-library-starter-kit?type=dev)
 
