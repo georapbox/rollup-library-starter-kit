@@ -47,5 +47,9 @@
     "rollup-plugin-terser": "~7.0.2"
   },
   "dependencies": {},
-  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead"
+  "browserslist": "> 0.5%, last 2 versions, Firefox ESR, not dead",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
 }
